@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,165 +6,366 @@
 
 <title>RegisterVyavsay | Business & Tax Services</title>
 
+<meta name="description" content="RegisterVyavsay provides GST, ITR, Shop Act, Udyam, FSSAI, PAN and business compliance services.">
+
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
-body {
-    background: #f7f7f7;
-    color: #333;
-    line-height: 1.6;
+html{
+    scroll-behavior:smooth;
 }
 
-header {
-    background: #f57c00;
-    color: white;
-    padding: 18px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+body{
+    background:#f7f8fa;
+    color:#222;
+    line-height:1.6;
 }
 
-.logo {
-    font-size: 25px;
-    font-weight: bold;
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#ff7a00,#ff9800);
+    color:white;
+    padding:14px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,0.15);
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.logo-box{
+    width:45px;
+    height:45px;
+    border-radius:12px;
+    background:white;
+    color:#ff7200;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+    font-weight:bold;
 }
 
-.hero {
-    background: white;
-    text-align: center;
-    padding: 75px 20px;
+.logo-text{
+    font-size:23px;
+    font-weight:bold;
 }
 
-.hero h1 {
-    font-size: 42px;
-    color: #222;
-    margin-bottom: 15px;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:22px;
+    font-weight:bold;
 }
 
-.hero p {
-    font-size: 19px;
-    color: #666;
-    margin-bottom: 30px;
+nav a:hover{
+    text-decoration:underline;
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#fff5e9,#ffffff);
+    padding:75px 6%;
+    text-align:center;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 12px;
+.hero h1{
+    font-size:42px;
+    color:#182b49;
+    margin-bottom:15px;
 }
 
-.whatsapp {
-    background: #25D366;
-    color: white;
+.hero h1 span{
+    color:#ff7200;
 }
 
-.call {
-    background: #f57c00;
-    color: white;
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+    color:#555;
 }
 
-section {
-    padding: 60px 6%;
+.buttons{
+    margin-top:28px;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 35px;
-    color: #222;
+.btn{
+    display:inline-block;
+    padding:13px 24px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:6px;
+    transition:0.3s;
 }
 
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
+.whatsapp{
+    background:#25D366;
+    color:white;
 }
 
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+.call{
+    background:#182b49;
+    color:white;
 }
 
-.card h3 {
-    color: #f57c00;
-    margin-bottom: 10px;
+.btn:hover{
+    transform:translateY(-2px);
+    opacity:0.9;
 }
 
-.price {
-    font-size: 22px;
-    font-weight: bold;
-    color: #222;
-    margin-top: 12px;
+/* SECTION */
+section{
+    padding:60px 6%;
 }
 
-.about {
-    background: white;
-    text-align: center;
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
 }
 
-.contact {
-    background: #fff3e0;
-    text-align: center;
+.section-title h2{
+    color:#182b49;
+    font-size:32px;
 }
 
-.contact p {
-    margin: 10px 0;
-    font-size: 17px;
+.section-title p{
+    color:#666;
 }
 
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
-@media (max-width: 700px) {
+.card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.08);
+    transition:0.3s;
+    border-top:4px solid #ff7900;
+}
 
-    header {
-        flex-direction: column;
-        gap: 12px;
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.13);
+}
+
+.card h3{
+    color:#182b49;
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.card p{
+    color:#666;
+    min-height:48px;
+}
+
+.price{
+    color:#ff7200;
+    font-size:22px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.enquire{
+    display:block;
+    background:#25D366;
+    color:white;
+    text-align:center;
+    padding:10px;
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.enquire:hover{
+    background:#1ebe5d;
+}
+
+/* ABOUT */
+.about{
+    background:white;
+}
+
+.about-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-content p{
+    color:#555;
+    font-size:17px;
+}
+
+/* LOCATION */
+.location{
+    text-align:center;
+}
+
+.location-box{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.08);
+}
+
+.location-box iframe{
+    width:100%;
+    height:300px;
+    border:0;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+/* FORM */
+.form-section{
+    background:#fff7ed;
+}
+
+.form-box{
+    max-width:650px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.08);
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea{
+    width:100%;
+    padding:13px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:7px;
+    font-size:15px;
+}
+
+.form-box textarea{
+    height:110px;
+    resize:none;
+}
+
+.submit-btn{
+    width:100%;
+    border:0;
+    padding:13px;
+    background:#25D366;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    border-radius:7px;
+    cursor:pointer;
+}
+
+/* CONTACT */
+.contact{
+    background:#182b49;
+    color:white;
+    text-align:center;
+}
+
+.contact h2{
+    margin-bottom:15px;
+}
+
+.contact p{
+    margin:7px;
+}
+
+.contact a{
+    color:white;
+    text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+    background:#111c2d;
+    color:#ddd;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+    .services{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    header{
+        padding:12px 4%;
     }
 
-    nav a {
-        margin: 0 7px;
-        font-size: 14px;
+    .logo-text{
+        font-size:19px;
     }
 
-    .hero h1 {
-        font-size: 32px;
+    .logo-box{
+        width:40px;
+        height:40px;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        padding:55px 5%;
+    }
+
+    .hero h1{
+        font-size:31px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    section{
+        padding:45px 5%;
+    }
+
+    .section-title h2{
+        font-size:27px;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        padding:22px;
+    }
+
+    .location-box iframe{
+        height:250px;
     }
 }
 </style>
@@ -172,27 +373,35 @@ footer {
 
 <body>
 
+<!-- HEADER -->
 <header>
 
-<div class="logo">RegisterVyavsay</div>
+<div class="logo">
+    <div class="logo-box">RV</div>
+    <div class="logo-text">RegisterVyavsay</div>
+</div>
 
 <nav>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 </header>
 
 
+<!-- HERO -->
 <section class="hero" id="home">
 
-<h1>Your Trusted Partner for Business & Tax Services</h1>
+<h1>
+    Your Trusted Partner for
+    <span>Business & Tax Services</span>
+</h1>
 
 <p>
-Simple, reliable and professional solutions for your business
-registration, tax and compliance needs.
+    GST, ITR, Shop Act, Udyam, FSSAI, PAN and Business Compliance
+    services — simple, professional and convenient.
 </p>
 
 <div class="buttons">
@@ -200,12 +409,11 @@ registration, tax and compliance needs.
 <a class="btn whatsapp"
 href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20need%20information%20about%20your%20services."
 target="_blank">
-WhatsApp Us
+    WhatsApp Us
 </a>
 
-<a class="btn call"
-href="tel:+918759040505">
-Call Now
+<a class="btn call" href="tel:+918759040505">
+    Call Now
 </a>
 
 </div>
@@ -213,236 +421,288 @@ Call Now
 </section>
 
 
+<!-- SERVICES -->
 <section id="services">
 
-<h2 class="section-title">Our Services & Pricing</h2>
+<div class="section-title">
+    <h2>Our Services</h2>
+    <p>Professional business and tax related services</p>
+</div>
 
 <div class="services">
 
 
 <div class="card">
-
 <h3>GST Registration</h3>
-
-<p>GST registration assistance for your business.</p>
-
+<p>Complete assistance for new GST registration.</p>
 <div class="price">₹999</div>
-
-<a class="btn whatsapp"
-href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20am%20interested%20in%20GST%20Registration."
-target="_blank">
-Enquire on WhatsApp
-</a>
-
+<a class="enquire"
+href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20want%20to%20enquire%20about%20GST%20Registration."
+target="_blank">Enquire on WhatsApp</a>
 </div>
 
 
 <div class="card">
-
 <h3>GST Return Filing</h3>
-
-<p>Regular GST return filing and compliance support.</p>
-
+<p>GST return filing assistance for businesses.</p>
 <div class="price">₹599</div>
-
-<a class="btn whatsapp"
-href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20am%20interested%20in%20GST%20Return%20Filing."
-target="_blank">
-Enquire on WhatsApp
-</a>
-
+<a class="enquire"
+href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20want%20to%20enquire%20about%20GST%20Return%20Filing."
+target="_blank">Enquire on WhatsApp</a>
 </div>
 
 
 <div class="card">
-
 <h3>ITR Filing</h3>
-
 <p>Income Tax Return filing assistance.</p>
-
 <div class="price">₹749</div>
-
-<a class="btn whatsapp"
-href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20am%20interested%20in%20ITR%20Filing."
-target="_blank">
-Enquire on WhatsApp
-</a>
-
+<a class="enquire"
+href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20want%20to%20enquire%20about%20ITR%20Filing."
+target="_blank">Enquire on WhatsApp</a>
 </div>
 
 
 <div class="card">
-
 <h3>Shop Act</h3>
-
 <p>Shop and Establishment registration assistance.</p>
-
 <div class="price">₹299</div>
-
-<a class="btn whatsapp"
-href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20am%20interested%20in%20Shop%20Act%20Registration."
-target="_blank">
-Enquire on WhatsApp
-</a>
-
+<a class="enquire"
+href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20want%20to%20enquire%20about%20Shop%20Act."
+target="_blank">Enquire on WhatsApp</a>
 </div>
 
 
 <div class="card">
-
 <h3>Udyam / MSME</h3>
-
-<p>Udyam MSME registration assistance.</p>
-
+<p>Udyam Registration assistance for businesses.</p>
 <div class="price">₹399</div>
-
-<a class="btn whatsapp"
-href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20am%20interested%20in%20Udyam%20MSME%20Registration."
-target="_blank">
-Enquire on WhatsApp
-</a>
-
+<a class="enquire"
+href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20want%20to%20enquire%20about%20Udyam%20MSME."
+target="_blank">Enquire on WhatsApp</a>
 </div>
 
 
 <div class="card">
-
 <h3>FSSAI</h3>
-
-<p>Food business FSSAI registration assistance.</p>
-
+<p>Food business licence registration assistance.</p>
 <div class="price">₹499 onwards</div>
-
-<a class="btn whatsapp"
-href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20am%20interested%20in%20FSSAI%20Registration."
-target="_blank">
-Enquire on WhatsApp
-</a>
-
+<a class="enquire"
+href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20want%20to%20enquire%20about%20FSSAI."
+target="_blank">Enquire on WhatsApp</a>
 </div>
 
 
 <div class="card">
-
 <h3>PTEC / PTRC</h3>
-
 <p>Professional Tax registration assistance.</p>
-
 <div class="price">₹499 onwards</div>
-
-<a class="btn whatsapp"
-href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20am%20interested%20in%20PTEC%20PTRC%20Registration."
-target="_blank">
-Enquire on WhatsApp
-</a>
-
+<a class="enquire"
+href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20want%20to%20enquire%20about%20PTEC%20PTRC."
+target="_blank">Enquire on WhatsApp</a>
 </div>
 
 
 <div class="card">
-
 <h3>PAN Services</h3>
-
-<p>PAN application and related services.</p>
-
+<p>PAN application and related assistance.</p>
 <div class="price">₹199 onwards</div>
-
-<a class="btn whatsapp"
-href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20am%20interested%20in%20PAN%20Services."
-target="_blank">
-Enquire on WhatsApp
-</a>
-
+<a class="enquire"
+href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20want%20to%20enquire%20about%20PAN%20Services."
+target="_blank">Enquire on WhatsApp</a>
 </div>
 
 
 <div class="card">
-
 <h3>Accounting & Bookkeeping</h3>
-
-<p>Accounting and bookkeeping support for businesses.</p>
-
+<p>Regular accounting and bookkeeping support.</p>
 <div class="price">Contact Us</div>
-
-<a class="btn whatsapp"
-href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20am%20interested%20in%20Accounting%20and%20Bookkeeping%20Services."
-target="_blank">
-Enquire on WhatsApp
-</a>
-
+<a class="enquire"
+href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20want%20to%20enquire%20about%20Accounting%20and%20Bookkeeping."
+target="_blank">Enquire on WhatsApp</a>
 </div>
 
 
 <div class="card">
-
 <h3>Business Compliance</h3>
-
-<p>Support for regular business compliance requirements.</p>
-
+<p>Business compliance and documentation assistance.</p>
 <div class="price">Contact Us</div>
-
-<a class="btn whatsapp"
-href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20am%20interested%20in%20Business%20Compliance%20Services."
-target="_blank">
-Enquire on WhatsApp
-</a>
-
+<a class="enquire"
+href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20want%20to%20enquire%20about%20Business%20Compliance."
+target="_blank">Enquire on WhatsApp</a>
 </div>
 
 
 </div>
-
 </section>
 
 
+<!-- ABOUT -->
 <section class="about" id="about">
 
-<h2 class="section-title">About RegisterVyavsay</h2>
+<div class="section-title">
+    <h2>About RegisterVyavsay</h2>
+</div>
+
+<div class="about-content">
 
 <p>
-RegisterVyavsay provides assistance for business registration,
-taxation, accounting and compliance-related services.
+RegisterVyavsay is a business service platform providing assistance
+for GST, Income Tax, registrations, licences, accounting and business
+compliance requirements.
 </p>
 
-</section>
-
-
-<section class="contact" id="contact">
-
-<h2 class="section-title">Contact Us</h2>
-
-<p><strong>Mobile / WhatsApp:</strong> 8759040505</p>
-
-<p><strong>Email:</strong> registervyavsay@gmail.com</p>
+<br>
 
 <p>
-<strong>Office:</strong>
-Office No. 301, Vitthal Rukhmini, Dattawadi, Pune
+Our objective is to make business registration and compliance processes
+simple, convenient and accessible for business owners.
 </p>
-
-<div class="buttons">
-
-<a class="btn whatsapp"
-href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20need%20information%20about%20your%20services."
-target="_blank">
-WhatsApp Us
-</a>
-
-<a class="btn call"
-href="tel:+918759040505">
-Call Now
-</a>
 
 </div>
 
 </section>
 
 
+<!-- LOCATION -->
+<section class="location">
+
+<div class="section-title">
+    <h2>Our Office</h2>
+    <p>Visit us at our Pune office</p>
+</div>
+
+<div class="location-box">
+
+<h3>RegisterVyavsay</h3>
+
+<p>
+Office No. 301, Vitthal Rukhmini,<br>
+Dattawadi, Pune
+</p>
+
+<!-- Replace the map URL with your exact Google Maps embed URL -->
+<iframe
+src="https://www.google.com/maps?q=Dattawadi%20Pune&output=embed"
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+
+<!-- ENQUIRY FORM -->
+<section class="form-section">
+
+<div class="section-title">
+    <h2>Quick Enquiry</h2>
+    <p>Send us your requirement on WhatsApp</p>
+</div>
+
+<div class="form-box">
+
+<form onsubmit="sendWhatsApp(); return false;">
+
+<input type="text" id="name"
+placeholder="Your Name" required>
+
+<input type="tel" id="mobile"
+placeholder="Mobile Number" required>
+
+<select id="service" required>
+
+<option value="">Select Service</option>
+<option>GST Registration</option>
+<option>GST Return Filing</option>
+<option>ITR Filing</option>
+<option>Shop Act</option>
+<option>Udyam / MSME</option>
+<option>FSSAI</option>
+<option>PTEC / PTRC</option>
+<option>PAN Services</option>
+<option>Accounting & Bookkeeping</option>
+<option>Business Compliance</option>
+
+</select>
+
+<textarea id="message"
+placeholder="Enter your requirement"></textarea>
+
+<button class="submit-btn" type="submit">
+    Send Enquiry on WhatsApp
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+<h2>Contact RegisterVyavsay</h2>
+
+<p>📞 <a href="tel:+918759040505">8759040505</a></p>
+
+<p>
+💬
+<a href="https://api.whatsapp.com/send?phone=918759040505"
+target="_blank">
+WhatsApp: 8759040505
+</a>
+</p>
+
+<p>
+📧
+<a href="mailto:registervyavsay@gmail.com">
+registervyavsay@gmail.com
+</a>
+</p>
+
+<p>📍 Office No. 301, Vitthal Rukhmini, Dattawadi, Pune</p>
+
+</section>
+
+
+<!-- FOOTER -->
 <footer>
 
-<p>© 2026 RegisterVyavsay. All Rights Reserved.</p>
+<p>
+© 2026 RegisterVyavsay. All Rights Reserved.
+</p>
+
+<p>
+Business & Tax Services
+</p>
 
 </footer>
+
+
+<script>
+
+function sendWhatsApp(){
+
+    var name = document.getElementById("name").value;
+    var mobile = document.getElementById("mobile").value;
+    var service = document.getElementById("service").value;
+    var message = document.getElementById("message").value;
+
+    var text =
+    "Hello RegisterVyavsay,%0A%0A" +
+    "Name: " + encodeURIComponent(name) + "%0A" +
+    "Mobile: " + encodeURIComponent(mobile) + "%0A" +
+    "Service: " + encodeURIComponent(service) + "%0A" +
+    "Requirement: " + encodeURIComponent(message);
+
+    var url =
+    "https://api.whatsapp.com/send?phone=918759040505&text=" + text;
+
+    window.open(url, "_blank");
+}
+
+</script>
 
 </body>
 </html>
