@@ -1,345 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>RegisterVyavsay | Business & Tax Services</title>
-  <meta name="description" content="RegisterVyavsay provides business registration, GST, ITR, Shop Act, Udyam, FSSAI and accounting services.">
+<title>RegisterVyavsay | Business & Tax Services</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-    body {
-      background: #f7f9fc;
-      color: #222;
-      line-height: 1.6;
-    }
+body {
+    background: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
 
+header {
+    background: #f57c00;
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 19px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.call {
+    background: #f57c00;
+    color: white;
+}
+
+section {
+    padding: 60px 6%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+    color: #222;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: #f57c00;
+    margin-bottom: 10px;
+}
+
+.about {
+    background: white;
+    text-align: center;
+}
+
+.contact {
+    background: #fff3e0;
+    text-align: center;
+}
+
+.contact p {
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 700px) {
     header {
-      background: #ff7a00;
-      color: white;
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .logo {
-      font-size: 25px;
-      font-weight: bold;
+        flex-direction: column;
+        gap: 12px;
     }
 
     nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 22px;
-      font-weight: bold;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #fff3e6, #ffffff);
-      padding: 90px 7%;
-      text-align: center;
+        margin: 0 7px;
+        font-size: 14px;
     }
 
     .hero h1 {
-      font-size: 46px;
-      color: #ff7a00;
-      margin-bottom: 15px;
+        font-size: 32px;
     }
-
-    .hero h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 18px;
-      color: #555;
-    }
-
-    .buttons {
-      margin-top: 30px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 24px;
-      margin: 7px;
-      border-radius: 7px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .btn-primary {
-      background: #ff7a00;
-      color: white;
-    }
-
-    .btn-secondary {
-      border: 2px solid #ff7a00;
-      color: #ff7a00;
-      background: white;
-    }
-
-    section {
-      padding: 65px 7%;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 35px;
-      color: #222;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      color: #ff7a00;
-      margin-bottom: 10px;
-    }
-
-    .about {
-      background: white;
-      text-align: center;
-    }
-
-    .about p {
-      max-width: 850px;
-      margin: auto;
-      font-size: 17px;
-      color: #555;
-    }
-
-    .contact-box {
-      max-width: 750px;
-      margin: auto;
-      background: white;
-      padding: 35px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-
-    .contact-box p {
-      margin: 15px 0;
-      font-size: 17px;
-    }
-
-    .contact-box a {
-      color: #ff7a00;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 25px;
-    }
-
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      nav a {
-        margin: 0 7px;
-        font-size: 14px;
-      }
-
-      .hero h1 {
-        font-size: 35px;
-      }
-
-      .hero h2 {
-        font-size: 23px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <header>
+<header>
     <div class="logo">RegisterVyavsay</div>
 
     <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
     </nav>
-  </header>
+</header>
 
-  <section class="hero" id="home">
-    <h1>RegisterVyavsay</h1>
-
-    <h2>Your Trusted Partner for Business & Tax Services</h2>
+<section class="hero" id="home">
+    <h1>Your Trusted Partner for Business & Tax Services</h1>
 
     <p>
-      Simple and convenient support for business registration,
-      taxation, compliance and accounting-related services.
+        Simple, reliable and professional solutions for your business registration,
+        tax and compliance needs.
     </p>
 
     <div class="buttons">
-      <a class="btn btn-primary"
-         href="https://wa.me/918759040505?text=Hello%20RegisterVyavsay,%20I%20need%20information%20about%20your%20services."
-         target="_blank">
-        WhatsApp Us
-      </a>
 
-      <a class="btn btn-secondary" href="tel:+918759040505">
-        Call Now
-      </a>
+        <a class="btn whatsapp"
+           href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20need%20information%20about%20your%20services."
+           target="_blank">
+           WhatsApp Us
+        </a>
+
+        <a class="btn call"
+           href="tel:+918759040505">
+           Call Now
+        </a>
+
     </div>
-  </section>
+</section>
 
+<section id="services">
 
-  <section id="services">
     <h2 class="section-title">Our Services</h2>
 
     <div class="services">
 
-      <div class="card">
-        <h3>GST Registration</h3>
-        <p>Assistance with GST registration and related documentation.</p>
-      </div>
+        <div class="card">
+            <h3>GST Registration</h3>
+            <p>GST registration assistance for your business.</p>
+        </div>
 
-      <div class="card">
-        <h3>GST Return Filing</h3>
-        <p>Support for periodic GST return filing and compliance.</p>
-      </div>
+        <div class="card">
+            <h3>GST Return Filing</h3>
+            <p>Regular GST return filing and compliance support.</p>
+        </div>
 
-      <div class="card">
-        <h3>ITR Filing</h3>
-        <p>Income Tax Return filing support for eligible taxpayers.</p>
-      </div>
+        <div class="card">
+            <h3>ITR Filing</h3>
+            <p>Income Tax Return filing assistance.</p>
+        </div>
 
-      <div class="card">
-        <h3>Shop Act</h3>
-        <p>Assistance with Shop & Establishment registration.</p>
-      </div>
+        <div class="card">
+            <h3>Shop Act</h3>
+            <p>Shop and Establishment registration assistance.</p>
+        </div>
 
-      <div class="card">
-        <h3>Udyam / MSME</h3>
-        <p>Support for Udyam registration and documentation.</p>
-      </div>
+        <div class="card">
+            <h3>Udyam / MSME</h3>
+            <p>Udyam MSME registration assistance.</p>
+        </div>
 
-      <div class="card">
-        <h3>FSSAI</h3>
-        <p>Assistance with FSSAI registration and licensing process.</p>
-      </div>
+        <div class="card">
+            <h3>FSSAI</h3>
+            <p>Food business FSSAI registration assistance.</p>
+        </div>
 
-      <div class="card">
-        <h3>PTEC / PTRC</h3>
-        <p>Support for Professional Tax registration and compliance.</p>
-      </div>
+        <div class="card">
+            <h3>PTEC / PTRC</h3>
+            <p>Professional Tax registration assistance.</p>
+        </div>
 
-      <div class="card">
-        <h3>PAN Services</h3>
-        <p>Assistance with PAN-related applications and services.</p>
-      </div>
+        <div class="card">
+            <h3>PAN Services</h3>
+            <p>PAN application and related services.</p>
+        </div>
 
-      <div class="card">
-        <h3>Accounting & Bookkeeping</h3>
-        <p>Accounting and bookkeeping support for businesses.</p>
-      </div>
+        <div class="card">
+            <h3>Accounting & Bookkeeping</h3>
+            <p>Accounting and bookkeeping support for businesses.</p>
+        </div>
 
-      <div class="card">
-        <h3>Business Compliance</h3>
-        <p>Support for various business registration and compliance requirements.</p>
-      </div>
+        <div class="card">
+            <h3>Business Compliance</h3>
+            <p>Support for regular business compliance requirements.</p>
+        </div>
 
     </div>
-  </section>
+</section>
 
+<section class="about" id="about">
 
-  <section class="about" id="about">
     <h2 class="section-title">About RegisterVyavsay</h2>
 
     <p>
-      RegisterVyavsay is a service platform focused on helping individuals,
-      startups and small businesses with registration, taxation and
-      compliance-related services. Our aim is to make the process simple,
-      transparent and convenient.
+        RegisterVyavsay provides assistance for business registration,
+        taxation, accounting and compliance-related services.
     </p>
-  </section>
 
+</section>
 
-  <section id="contact">
+<section class="contact" id="contact">
+
     <h2 class="section-title">Contact Us</h2>
 
-    <div class="contact-box">
+    <p><strong>Mobile / WhatsApp:</strong> 8759040505</p>
 
-      <p>
-        <strong>📞 Mobile / WhatsApp:</strong><br>
-        <a class="btn btn-primary"
-href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay,%20I%20need%20information%20about%20your%20services.">
-WhatsApp Us
-</a>
-      </p>
+    <p><strong>Email:</strong> registervyavsay@gmail.com</p>
 
-      <p>
-        <strong>📧 Email:</strong><br>
-        <a href="mailto:registervyavsay@gmail.com">
-          registervyavsay@gmail.com
-        </a>
-      </p>
+    <p>
+        <strong>Office:</strong>
+        Office No. 301, Vitthal Rukhmini, Dattawadi, Pune
+    </p>
 
-      <p>
-        <strong>📍 Office:</strong><br>
-        Office No. 301, Vitthal Rukhmini Bulding,<br>
-        Dattawadi, Pune.
-      </p>
+    <div class="buttons" style="margin-top:25px;">
 
-      <div class="buttons">
-        <a class="btn btn-primary"
-           href="https://wa.me/918759040505?text=Hello%20RegisterVyavsay,%20I%20want%20to%20know%20more%20about%20your%20services."
+        <a class="btn whatsapp"
+           href="https://api.whatsapp.com/send?phone=918759040505&text=Hello%20RegisterVyavsay%2C%20I%20need%20information%20about%20your%20services."
            target="_blank">
-          Chat on WhatsApp
+           WhatsApp Us
         </a>
-      </div>
+
+        <a class="btn call"
+           href="tel:+918759040505">
+           Call Now
+        </a>
 
     </div>
-  </section>
 
+</section>
 
-  <footer>
+<footer>
     <p>© 2026 RegisterVyavsay. All Rights Reserved.</p>
-    <p>Business & Tax Services</p>
-  </footer>
+</footer>
 
 </body>
 </html>
